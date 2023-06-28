@@ -10,3 +10,8 @@ function cambiarImagen2(){
 
 var edad = 12;
 console.log(edad);
+
+
+let x = 10/100;
+console.log(x);
+
