@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class= "titulo" id="primerT">primer titulo</h1>
+    <h1 class= "titulo" id="segundoT">segundo titulo</h1>
+    <h1 class= "titulo" id="tercerT">tercer titulo</h1>
+    <h1></h1>
+    <h1></h1>
+    <script>
+        // Adicion de propiedades        
+        let titulos = document.querySelectorAll('h1');
+        titulos[3].className='titulo';
+        titulos[3].textContent ='cuartita';
+        titulos[3].classList.add('encabezado','segundoEncabezado'); // add eccabezado
+        titulos[3].classList.remove('encabezado','segundoEncabezado'); // add eccabezado
+
+        titulos[4].setAttribute ('class','titulo')
+        titulos[4].setAttribute ('id','quintot')
+        titulos[4].textContent='Quinto'
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="502c14"><center>
+    <h1 style="color: bisque;" >BUSQUEDA DEL TESORO</h1>
+   <img src="./mapa2.jpg" id = "mapa">
+    <p id="distancia" style="color: beige; font-size:20px;"></p>
+    </center>
+    
+    <script>
+        let mapa = document.getElementById('mapa');
+        let p = document.getElementById('distancia');
+        let ancho = 850;
+        let alto  = 850; 
+        let click = 0;
+        
+        let numAzar     =(valor)    => Math.floor((Math.random()*valor))
+        
+        let alerta =['Quemado','Muy caliente','Caliente','Tibio','Frio','Muy frio','Congelado','Fuera','Perdido','Muy perdido','Muerto']
+        let traerAyuda  =(distancia)=> alerta[Math.round((distancia/ ancho )*10)];
+        
+        let tesoro = {
+            x: numAzar(ancho),
+            y: numAzar(alto)
+        }
+        
+        let traerDistancia=(event,tesoro) =>{
+            let difX = event.offsetX - tesoro.x;
+            let difY = event.offsetY -tesoro.y;
+            console.log('T:['+ tesoro.x +';'+tesoro.y + ']');
+            console.log('P:['+ event.offsetX +';'+event.offsetY + ']');
+            return Math.sqrt((difX*difX)+(difY*difY))
+        }
+
+        mapa.addEventListener('click',()=>{
+            click++
+            let distancia = traerDistancia(event,tesoro)
+            let ayuda = traerAyuda(distancia); 
+            p.innerHTML = ayuda
+            if(distancia<25){
+                alert('encontraste tesoro en ' + click + ' clicks -  X:'+tesoro.x + ' Y: '+tesoro.y);
+                click = 0;
+                tesoro.x = numAzar(ancho);
+                tesoro.y = numAzar(alto);      
+            }
+        })
+    </script>
+</body>
+</html>

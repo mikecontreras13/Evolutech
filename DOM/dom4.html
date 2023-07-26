@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Evolutech</h1>
+        <h1>Evolutech</h1>
+        <h1>Evolutech</h1>
+        <h1>Evolutech</h1>
+        <h2>clases </h2>
+        <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+        <ol>
+            <li>x</li>
+            <li>y</li>
+            <li>z</li>
+        </ol>
+        <hr> 
+        <ul>
+
+        </ul>
+    </div>
+    <script>
+        let lista = `<li>parte1</li>
+         <li>parte2</li>
+         <li>parte3</li>`
+         let ul = document.querySelectorAll('ul');
+         ul[1].innerHTML=lista;
+         //ul[1].innerHTML='';
+
+         let titulos = document.querySelectorAll('h1');
+         titulos.forEach((titulo,i)=>{
+            titulo.style.fontSize = '24px'
+            if(i%2==0)
+                titulo.style.backgroundColor = 'red'
+            else
+                titulo.style.backgroundColor = 'green'
+            
+         })
+    </script>
+</body>
+</html>

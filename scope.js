@@ -31,7 +31,8 @@ let elemento3   = "puerta";
 
 let mensaje1 =  `todos puede ver`;
 
-console.log(mensaje1);
+console.log(mensaje1);+
+
 
 let country = "Malawi";
 let continent = "Africa";

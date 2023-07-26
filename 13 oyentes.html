@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" >click Me </button>
+    <button id="btn1">click Me 1</button>
+    <button id="btn2">click Me 2</button>
+    <button onclick="clickMe()">click otra </button> 
+    <hr>
+
+    <h1>INDICE DE MASA </h1>
+    <input type="text" id="peso" placeholder="peso msm">
+    <input type="text" id="altura" placeholder="altura msm">
+    <button id="calcula">Calcula</button>   
+    
+    <script>
+        let boton = document.getElementById('btn')
+        boton.addEventListener('click', e=>{
+            //alert(e.target);
+            console.log(e)
+            console.log(e.target)
+        })
+
+        const clickMe =()=> {
+            alert('hiciste click')
+        }
+        
+        // doble click 
+        let boton1 = document.getElementById('btn1')
+        boton1.addEventListener('dblclick',e=>alert('pat'))
+
+        // mouse enter 
+        let boton2 = document.getElementById('btn2')
+        boton2.addEventListener('mouseenter',e=>alert('hower'))
+
+       // indice de masa 
+       let peso = document.getElementById('peso')
+       let altura = document.getElementById('altura')
+       //let peso = document.querySelector('#peso')
+       //let altura = document.querySelector('#altura')  
+        let botonc = document.getElementById('calcula')
+
+        botonc.addEventListener('click',()=>{
+            alert(peso.value +' --- '+ altura.value)
+            let im = peso.value/altura.value**2
+            alert('tu indice es :' + im )
+        })
+
+        // presionar tecla 
+        document.body.addEventListener('keypress',e=>{
+            alert(e.keyCode)
+        })
+
+
+    </script>
+</body>
+</html>

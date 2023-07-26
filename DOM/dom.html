@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+    </head>
+    <style>
+        .titulos{
+            background-color: brown;
+        }
+        #titulo2{
+            background-color: blueviolet;
+        }
+    </style>
+    <body>      
+        <h1 class="titulos" id="titulo11"> hola a Todos 1</h1>
+        <h1 class="titulos" id="titulo12"> hola a Todos 2</h1>
+        <h1 class="titulos" id="titulo13"> hola a Todos 3</h1>
+        <h1 class="titulos" id="titulo14"> hola a Todos 4</h1>
+        <h2 class="subtitulos" id="titulo21"> hola a Todos 5</h2>
+        <h2 class="subtitulos" id="titulo22"> hola a Todos 5</h2>
+        <h2 class="subtitulos" id="titulo23"> hola a Todos 5</h2>
+        <h2 class="subtitulos" id="titulo24"> hola a Todos 5</h2>
+        <h2 class="subtitulos" id="titulo25"> hola a Todos 5</h2>
+        <input type="number">
+        <button onclick="alert('hola mundo')">enviar </button>
+    </body>
+    <script>
+        // obtener elemetos por tag 
+        let titulos = document.getElementsByTagName('h1');
+        console.log (titulos);
+        console.log('numero de elementos: ' ,titulos.length)
+        for(let i=0; i<titulos.length; i++){
+            console.log(titulos[i])
+        }
+ 
+        //obtener elemetos por clase
+        let subtitulo = document.getElementsByClassName('subtitulos');
+        for(let i=0; i<subtitulo.length; i++){
+            console.log(subtitulo[i])
+        }
+
+        //obtener elemetos por id
+        let titulo3 = document.getElementById('titulo25');
+            console.log(titulo3);
+        
+    </script>
+</html>
