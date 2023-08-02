@@ -76,7 +76,17 @@ const fetchData = async()=>{
         console.log(data)
     }
     catch(error){
-        console.log(error)
+        //console.log(error)
     }
 }
 fetchData()
+
+let url2 ='https://rickandmortyapi.com/api/character'
+const fetchData2 = async ()=>{
+        const respuesta = await fetch(url2)
+        const data = await respuesta.json()
+        return await data.result  
+}
+let datos = await fetchData2()
+console.log(datos)
+

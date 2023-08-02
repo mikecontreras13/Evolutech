@@ -1,0 +1,33 @@
+body{
+    background-color: white;
+    color:cadetblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+#characterList {
+    border: 1px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+}
+.characterCard{
+    border:3px solid #17ec9a;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 135px;
+    cursor: pointer;
+}
+.characterCard img {
+    width: 100%;
+    border-radius: 65px;
+    margin-bottom: 10px;
+}
+#characterDetails {
+    margin-top: 20px;
+    border: 1px solid black;
+}

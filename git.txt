@@ -1,0 +1,8 @@
+https://github.com/mpramos/JAVASCRIPTV4.git
+git clone https://github.com/mpramos/JAVASCRIPTV4.git
+
+
+
+git add .
+git commit - 'msm'
+git push -u origin master 
